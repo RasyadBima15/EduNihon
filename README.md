@@ -1,1 +1,2 @@
 # EduNihon
+EduNihon adalah platform yang ditujukan untuk siswa yang ingin melanjutkan studi di Jepang 🗾. Aplikasi ini membantu mereka dengan menyediakan informasi tentang universitas di Jepang, membandingkan program studi, dan memberikan panduan selama proses aplikasi. Dengan EduNihon, siswa dapat mengambil keputusan yang lebih baik dan mempersiapkan diri untuk melanjutkan pendidikan di negara matahari terbit tersebut.
