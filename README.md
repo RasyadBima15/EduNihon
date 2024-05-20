@@ -1,1 +1,1 @@
-# GoNihon
+# EduNihon
