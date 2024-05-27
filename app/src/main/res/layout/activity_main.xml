@@ -16,309 +16,123 @@
             android:background="@color/white">
             <include layout="@layout/toolbar"/>
         </LinearLayout>
-            <ScrollView
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:id="@+id/fragment_layout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scrollbars="none">
+                android:layout_height="match_parent"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/navbar_style"
+                android:orientation="horizontal">
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:id="@+id/univ_btn"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:orientation="vertical">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:paddingVertical="35dp"
-                        android:paddingHorizontal="40dp"
-                        android:orientation="vertical">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Siapa Kami?"
-                            android:textColor="#FF0000"
-                            android:textSize="18sp"
-                            android:layout_marginBottom="10dp"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Platform Terbaik Anda untuk Studi di Jepang"
-                            android:textColor="@color/black"
-                            android:textStyle="bold"
-                            android:textSize="25sp"
-                            android:layout_marginBottom="10dp"/>
-                        <com.codesgood.views.JustifiedTextView
-                            android:fontFamily="sans-serif-light"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Selamat datang di EduNihon, platform inovatif yang didedikasikan untuk mendukung siswa yang bercita-cita melanjutkan studi mereka di Jepang. Kami memahami bahwa merencanakan pendidikan di luar negeri adalah langkah besar yang memerlukan informasi yang akurat dan komprehensif. Oleh karena itu, EduNihon hadir untuk menjadi mitra terbaik Anda dalam perjalanan ini."
-                            android:textColor="@color/black"
-                            android:textSize="18sp"/>
-                    </LinearLayout>
                     <ImageView
-                        android:layout_width="425dp"
-                        android:layout_height="297dp"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/pic1" />
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="54dp"
+                        android:layout_height="26dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/university_logo" />
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="#EAEAEA"
-                        android:orientation="vertical"
-                        android:paddingHorizontal="35dp"
-                        android:paddingVertical="40dp">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="10dp"
-                            android:text="Misi Kami"
-                            android:textColor="#FF0000"
-                            android:textSize="18sp" />
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="10dp"
-                            android:text="Memberdayakan Siswa untuk Sukses Studi di Jepang"
-                            android:textColor="@color/black"
-                            android:textSize="25sp"
-                            android:textStyle="bold"/>
-                        <com.codesgood.views.JustifiedTextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-light"
-                            android:text="Misi kami adalah untuk memberdayakan siswa dengan menyediakan informasi yang akurat dan relevan, sehingga mereka dapat mempersiapkan diri dengan baik untuk melanjutkan pendidikan di Jepang. EduNihon berkomitmen untuk menjadi sumber informasi terpercaya yang membantu siswa mencapai impian akademik mereka di negeri matahari terbit."
-                            android:textColor="@color/black"
-                            android:textSize="18sp" />
-                    </LinearLayout>
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="250dp"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/pic2" />
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:paddingVertical="40dp"
-                        android:paddingHorizontal="35dp"
-                        android:orientation="vertical">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Apa yang Kami Tawarkan?"
-                            android:textColor="#FF0000"
-                            android:textSize="18sp"
-                            android:layout_marginBottom="10dp"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Mendukung Keputusan Studi Anda di Jepang dengan EduNihon"
-                            android:textColor="@color/black"
-                            android:textStyle="bold"
-                            android:textSize="25sp"
-                            android:layout_marginBottom="10dp"/>
-                        <com.codesgood.views.JustifiedTextView
-                            android:fontFamily="sans-serif-light"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="EduNihon menyediakan berbagai informasi penting untuk membantu Anda membuat keputusan terbaik mengenai studi di Jepang. Di sini, Anda dapat menemukan: Informasi Universitas, Beasiswa dan referensi belajar bahasa Jepang dan bahasa Inggris dari berbagai situs belajar terkemuka. Dengan akses ke sumber daya ini, Anda dapat mempersiapkan diri lebih baik untuk menghadapi kehidupan akademik dan sosial di Jepang."
-                            android:textColor="@color/black"
-                            android:textSize="18sp"
-                            android:layout_marginBottom="20dp"/>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="20dp"
-                            android:background="@drawable/button_cta_style"
-                            android:gravity="start"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:layout_marginStart="20dp"
-                                android:gravity="center"
-                                android:text="Informasi Universitas"
-                                android:textColor="@color/white"
-                                android:textSize="17sp"
-                                android:textStyle="bold" />
-
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_marginStart="80dp"
-                                android:background="#454545"
-                                android:src="@drawable/baseline_arrow_right_alt_24" />
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/button_cta_style"
-                            android:orientation="horizontal"
-                            android:gravity="start"
-                            android:layout_marginBottom="20dp">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:layout_marginStart="20dp"
-                                android:text="Beasiswa"
-                                android:textSize="17sp"
-                                android:textStyle="bold"
-                                android:textColor="@color/white"/>
-                            <ImageView
-                                android:layout_marginStart="170dp"
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:src="@drawable/baseline_arrow_right_alt_24"
-                                android:background="#454545"/>
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="75dp"
-                            android:background="@drawable/button_cta_style"
-                            android:gravity="start"
-                            android:orientation="horizontal">
-                            <TextView
-                                android:layout_width="182dp"
-                                android:layout_height="match_parent"
-                                android:layout_marginStart="20dp"
-                                android:gravity="center|start"
-                                android:lineSpacingExtra="3dp"
-                                android:text="Sumber Belajar Bahasa Jepang dan Inggris"
-                                android:textColor="@color/white"
-                                android:textSize="17sp"
-                                android:textStyle="bold" />
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_gravity="center"
-                                android:layout_marginStart="60dp"
-                                android:background="#454545"
-                                android:src="@drawable/baseline_arrow_right_alt_24" />
-                        </LinearLayout>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:paddingVertical="40dp"
-                        android:paddingHorizontal="30dp"
-                        android:background="#EAEAEA"
-                        android:orientation="vertical">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Keuntungan"
-                            android:textColor="#FF0000"
-                            android:textSize="18sp"
-                            android:gravity="center"
-                            android:layout_marginBottom="10dp"/>
-                        <TextView
-                            android:gravity="center"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Mengapa Memilih EduNihon?"
-                            android:textColor="@color/black"
-                            android:textStyle="bold"
-                            android:textSize="25sp"/>
-                    </LinearLayout>
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="198dp"
-                        android:background="#EAEAEA"
-                        android:src="@drawable/pic3" />
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:paddingVertical="20dp"
-                        android:paddingHorizontal="30dp"
-                        android:background="#EAEAEA"
-                        android:orientation="vertical">
-                        <LinearLayout
-                            android:layout_marginBottom="15dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-                            <ImageView
-                                android:layout_width="86dp"
-                                android:layout_height="56dp"
-                                android:src="@drawable/komprehensif" />
-                            <TextView
-                                android:layout_marginStart="20dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Komprehensif dan Terpercaya"
-                                android:textColor="@color/black"
-                                android:textStyle="bold"
-                                android:textSize="20sp"
-                                android:layout_marginBottom="20dp"/>
-                            <com.codesgood.views.JustifiedTextView
-                                android:layout_marginStart="20dp"
-                                android:fontFamily="sans-serif-light"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Kami menyajikan informasi yang lengkap dan dapat diandalkan, memastikan bahwa Anda memiliki semua yang Anda butuhkan untuk membuat keputusan yang tepat."
-                                android:textColor="@color/black"
-                                android:textSize="18sp"
-                                android:layout_marginBottom="20dp"/>
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_marginBottom="15dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-                            <ImageView
-                                android:layout_width="86dp"
-                                android:layout_height="56dp"
-                                android:src="@drawable/dukungan" />
-                            <TextView
-                                android:layout_marginStart="20dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Dukungan Berkelanjutan"
-                                android:textColor="@color/black"
-                                android:textStyle="bold"
-                                android:textSize="20sp"
-                                android:layout_marginBottom="20dp"/>
-                            <com.codesgood.views.JustifiedTextView
-                                android:layout_marginStart="20dp"
-                                android:fontFamily="sans-serif-light"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="EduNihon hadir untuk mendukung Anda setiap langkah, mulai dari memilih universitas hingga menemukan beasiswa dan mempersiapkan diri secara akademis dan bahasa."
-                                android:textColor="@color/black"
-                                android:textSize="18sp"
-                                android:layout_marginBottom="20dp"/>
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_marginBottom="15dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-                            <ImageView
-                                android:layout_width="86dp"
-                                android:layout_height="56dp"
-                                android:src="@drawable/akses" />
-                            <TextView
-                                android:layout_marginStart="20dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Akses Mudah"
-                                android:textColor="@color/black"
-                                android:textStyle="bold"
-                                android:textSize="20sp"
-                                android:layout_marginBottom="20dp"/>
-                            <com.codesgood.views.JustifiedTextView
-                                android:layout_marginStart="20dp"
-                                android:fontFamily="sans-serif-light"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Platform kami dirancang agar mudah digunakan, sehingga Anda dapat mengakses semua informasi yang Anda butuhkan dengan cepat dan efisien."
-                                android:textColor="@color/black"
-                                android:textSize="18sp"
-                                android:layout_marginBottom="20dp"/>
-                        </LinearLayout>
-                    </LinearLayout>
+                        android:text="Universitas"
+                        android:textColor="@color/black"
+                        android:textSize="12dp" />
                 </LinearLayout>
-            </ScrollView>
+                <LinearLayout
+                    android:id="@+id/scholars_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="25dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/beasiswa_logo" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Beasiswa"
+                        android:textColor="@color/black"
+                        android:textSize="12dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/about_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="#ADADAD"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="54dp"
+                        android:layout_height="27dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/about_logo" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tentang"
+                        android:textColor="@color/black"
+                        android:textSize="12dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/learn_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="87dp"
+                        android:layout_height="29dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/reference_logo" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Belajar"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="12dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/profile_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="29dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/profile_logo" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Profil"
+                        android:textColor="@color/black"
+                        android:textSize="12dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+        
     </LinearLayout>
     <RelativeLayout
         android:layout_width="230dp"
