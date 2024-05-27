@@ -19,6 +19,8 @@ import com.example.edunihon.Fragment.UniversityFragment;
 
 public class MainActivity extends AppCompatActivity {
 
+    public LinearLayout univ, scholars, about, learn, profile;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,11 +55,11 @@ public class MainActivity extends AppCompatActivity {
                     .commit();
         }
 
-        LinearLayout univ = findViewById(R.id.univ_btn);
-        LinearLayout scholars = findViewById(R.id.scholars_btn);
-        LinearLayout about = findViewById(R.id.about_btn);
-        LinearLayout learn = findViewById(R.id.learn_btn);
-        LinearLayout profile = findViewById(R.id.profile_btn);
+        univ = findViewById(R.id.univ_btn);
+        scholars = findViewById(R.id.scholars_btn);
+        about = findViewById(R.id.about_btn);
+        learn = findViewById(R.id.learn_btn);
+        profile = findViewById(R.id.profile_btn);
 
         univ.setOnClickListener( v -> {
             univ.setBackgroundColor(Color.parseColor("#B2B2B2"));
