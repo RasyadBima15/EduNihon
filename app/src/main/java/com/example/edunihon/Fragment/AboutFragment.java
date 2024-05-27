@@ -13,7 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import com.example.edunihon.MainActivity;
+import com.example.edunihon.Activity.MainActivity;
 import com.example.edunihon.R;
 
 public class AboutFragment extends Fragment {

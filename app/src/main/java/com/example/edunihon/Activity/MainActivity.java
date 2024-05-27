@@ -1,4 +1,4 @@
-package com.example.edunihon;
+package com.example.edunihon.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
@@ -6,16 +6,19 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.example.edunihon.Fragment.AboutFragment;
 import com.example.edunihon.Fragment.LearnFragment;
 import com.example.edunihon.Fragment.ProfileFragment;
 import com.example.edunihon.Fragment.ScholarshipFragment;
 import com.example.edunihon.Fragment.UniversityFragment;
+import com.example.edunihon.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -129,6 +132,13 @@ public class MainActivity extends AppCompatActivity {
                         .replace(R.id.fragment_layout, profileFragment, ProfileFragment.class.getSimpleName())
                         .commit();
             }
+        });
+
+        TextView register = findViewById(R.id.register_btn);
+        register.setOnClickListener( v -> {
+            Intent intent = new Intent(this, RegisterActivity.class);
+            startActivity(intent);
+            finish();
         });
     }
 
