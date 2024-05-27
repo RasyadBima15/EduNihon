@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_marginStart="20dp"
+            android:layout_width="124dp"
+            android:layout_height="65dp"
+            android:src="@drawable/logo" />
+        <ImageView
+            android:id="@+id/user_logo"
+            android:layout_width="64dp"
+            android:layout_height="63dp"
+            android:layout_marginStart="170dp"
+            android:src="@drawable/user_logo"
+            android:onClick="toggleDrawer"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

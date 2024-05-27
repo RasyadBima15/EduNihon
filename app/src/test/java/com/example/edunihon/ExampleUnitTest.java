@@ -1,4 +1,4 @@
-package com.example.gonihon;
+package com.example.edunihon;
 
 import org.junit.Test;
 

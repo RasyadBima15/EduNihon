@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "GoNihon!"
+rootProject.name = "EduNihon"
 include(":app")
  
