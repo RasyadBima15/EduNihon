@@ -2,34 +2,35 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
-    android:gravity="center">
+    android:layout_height="match_parent"
+    android:background="#FF0000"
+    android:gravity="top">
     <TextView
         android:id="@+id/profile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Lihat Profil"
         android:textSize="20sp"
-        android:paddingVertical="10dp"
-        android:textColor="@color/black"
+        android:paddingVertical="15dp"
+        android:textColor="@color/white"
         android:paddingStart="25dp"
         android:gravity="start"/>
     <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#ABABAB"/>
+        android:layout_height="2dp"
+        android:background="@color/white"/>
     <TextView
         android:id="@+id/logout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Logout"
         android:textSize="20sp"
-        android:paddingVertical="10dp"
-        android:textColor="@color/black"
+        android:paddingVertical="15dp"
+        android:textColor="@color/white"
         android:paddingStart="25dp"
         android:gravity="start"/>
     <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#ABABAB"/>
+        android:layout_height="2dp"
+        android:background="@color/white"/>
 </LinearLayout>

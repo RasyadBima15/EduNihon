@@ -112,6 +112,7 @@
                 android:id="@+id/univ_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="10dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/button_cta_style"
                 android:gravity="start"
@@ -119,19 +120,18 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="10dp"
                     android:gravity="center"
                     android:text="Informasi Universitas"
                     android:textColor="@color/white"
                     android:textSize="17sp"
                     android:textStyle="bold" />
-
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
                     android:layout_marginStart="80dp"
-                    android:background="#454545"
-                    android:src="@drawable/baseline_arrow_right_alt_24" />
+                    android:background="#F94309"
+                    android:src="@drawable/arrow_outward_24" />
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/scholars_btn"
@@ -140,22 +140,23 @@
                 android:background="@drawable/button_cta_style"
                 android:orientation="horizontal"
                 android:gravity="start"
+                android:padding="10dp"
                 android:layout_marginBottom="20dp">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="10dp"
                     android:text="Beasiswa"
                     android:textSize="17sp"
                     android:textStyle="bold"
                     android:textColor="@color/white"/>
                 <ImageView
                     android:layout_marginStart="170dp"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/baseline_arrow_right_alt_24"
-                    android:background="#454545"/>
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/arrow_outward_24"
+                    android:background="#F94309"/>
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/learn_btn"
@@ -175,12 +176,12 @@
                     android:textSize="17sp"
                     android:textStyle="bold" />
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
                     android:layout_gravity="center"
                     android:layout_marginStart="60dp"
-                    android:background="#454545"
-                    android:src="@drawable/baseline_arrow_right_alt_24" />
+                    android:background="#F94309"
+                    android:src="@drawable/arrow_outward_24" />
             </LinearLayout>
         </LinearLayout>
         <LinearLayout

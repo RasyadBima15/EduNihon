@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragment.ScholarshipFragment">
-
-    <!-- TODO: Update blank fragment layout -->
+    android:orientation="vertical"
+    tools:context=".Fragment.UniversityFragment">
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
-
-</FrameLayout>
+        android:layout_height="wrap_content"
+        android:text="Beasiswa"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"/>
+    <LinearLayout
+        android:layout_marginVertical="15dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <SearchView
+            android:id="@+id/search_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search..." />
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/filter"/>
+    </LinearLayout>
+</LinearLayout>

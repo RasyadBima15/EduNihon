@@ -118,7 +118,6 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="vertical">
-
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="29dp"
