@@ -23,6 +23,7 @@
         </activity>
         <activity
             android:name=".Activity.MainActivity"
+            android:windowSoftInputMode="adjustPan"
             android:exported="true"/>
         <activity
             android:name=".Activity.RegisterActivity"

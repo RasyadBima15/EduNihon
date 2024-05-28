@@ -10,7 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Lihat Profil"
-        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textSize="18sp"
         android:paddingVertical="15dp"
         android:textColor="@color/white"
         android:paddingStart="25dp"
@@ -21,10 +22,11 @@
         android:background="@color/white"/>
     <TextView
         android:id="@+id/logout"
+        android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Logout"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:paddingVertical="15dp"
         android:textColor="@color/white"
         android:paddingStart="25dp"

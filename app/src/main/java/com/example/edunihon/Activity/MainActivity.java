@@ -167,7 +167,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void showLogoutDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("logout");
+        builder.setTitle("Logout");
         builder.setMessage("Apakah Anda yakin ingin logout?");
         builder.setPositiveButton("Ya", (dialog, which) -> {
             SharedPreferences.Editor editor = preferencesLogin.edit();

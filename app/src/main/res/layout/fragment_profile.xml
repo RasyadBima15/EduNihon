@@ -1,11 +1,205 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="70dp"
+    android:scrollbars="none"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:layout_height="wrap_content"
     tools:context=".Fragment.ProfileFragment">
-
-
-
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="20dp"
+        tools:context=".Fragment.ProfileFragment">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textColor="#FF0000"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nama Lengkap"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"/>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nama_lengkap"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/form_style"
+            android:textColorHint="@color/black"
+            android:paddingHorizontal="15dp"
+            android:inputType="text" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tingkat Pendidikan Saat Ini"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"/>
+        <RadioGroup
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioButton
+                android:id="@+id/radio_sma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SMA" />
+            <RadioButton
+                android:id="@+id/radio_s1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="S1" />
+            <RadioButton
+                android:id="@+id/radio_s2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="S2" />
+            <RadioButton
+                android:id="@+id/radio_s3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="S3" />
+        </RadioGroup>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Universitas Saat Ini"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"/>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/universitas"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/form_style"
+            android:textColorHint="@color/black"
+            android:paddingHorizontal="15dp"
+            android:inputType="text" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Minat Program Studi"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"/>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/program_studi"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/form_style"
+            android:textColorHint="@color/black"
+            android:paddingHorizontal="15dp"
+            android:inputType="text" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bahasa yang Dikuasai"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"/>
+        <CheckBox
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:id="@+id/checkbox_inggris"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inggris" />
+        <RadioGroup
+            android:id="@+id/radioGroup_inggris"
+            android:layout_marginStart="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <RadioButton
+                android:id="@+id/radio_pemula"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pemula" />
+            <RadioButton
+                android:id="@+id/radio_menengah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Menengah" />
+            <RadioButton
+                android:id="@+id/radio_mahir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mahir" />
+        </RadioGroup>
+        <CheckBox
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:id="@+id/checkbox_jepang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jepang" />
+        <RadioGroup
+            android:id="@+id/radioGroup_jepang"
+            android:layout_marginStart="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <RadioButton
+                android:id="@+id/radio_n5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N5" />
+            <RadioButton
+                android:id="@+id/radio_n4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N4" />
+            <RadioButton
+                android:id="@+id/radio_n3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N3" />
+            <RadioButton
+                android:id="@+id/radio_n2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N2" />
+            <RadioButton
+                android:id="@+id/radio_n1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N1" />
+        </RadioGroup>
+        <LinearLayout
+            android:id="@+id/save_btn"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/loginregister_btn">
+            <TextView
+                android:paddingVertical="8dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="SAVE"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
