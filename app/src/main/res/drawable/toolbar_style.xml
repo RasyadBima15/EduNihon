@@ -4,4 +4,9 @@
     <solid android:color="@color/white"/>
     <stroke android:color="#ABABAB"
         android:width="1dp"/>
+    <gradient
+        android:angle="270"
+        android:startColor="#FFFFFF"
+        android:endColor="#E19191"
+        android:type="linear" />
 </shape>

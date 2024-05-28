@@ -1,5 +1,6 @@
 package com.example.edunihon.Activity;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -7,11 +8,13 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.edunihon.Fragment.AboutFragment;
 import com.example.edunihon.Fragment.LearnFragment;
@@ -19,15 +22,19 @@ import com.example.edunihon.Fragment.ProfileFragment;
 import com.example.edunihon.Fragment.ScholarshipFragment;
 import com.example.edunihon.Fragment.UniversityFragment;
 import com.example.edunihon.R;
+import com.google.android.material.textfield.TextInputEditText;
 
 public class MainActivity extends AppCompatActivity {
 
     public LinearLayout univ, scholars, about, learn, profile;
+    SharedPreferences preferencesLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        preferencesLogin = this.getSharedPreferences("login_status", MODE_PRIVATE);
 
         ImageView userLogo = findViewById(R.id.user_logo);
         DrawerLayout drawerLayout = findViewById(R.id.drawerLayout);
@@ -35,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
         userLogo.setOnClickListener(v -> {
             openDrawer(drawerLayout);
         });
+
+        TextView profileCta = findViewById(R.id.profile);
+        TextView logout = findViewById(R.id.logout);
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         AboutFragment aboutFragment = new AboutFragment();
@@ -57,6 +67,26 @@ public class MainActivity extends AppCompatActivity {
                     .replace(R.id.fragment_layout, aboutFragment, AboutFragment.class.getSimpleName())
                     .commit();
         }
+
+        profileCta.setOnClickListener( v -> {
+            univ.setBackgroundColor(Color.parseColor("#FFFFFF"));
+            scholars.setBackgroundColor(Color.parseColor("#FFFFFF"));
+            about.setBackgroundColor(Color.parseColor("#FFFFFF"));
+            learn.setBackgroundColor(Color.parseColor("#FFFFFF"));
+            profile.setBackgroundColor(Color.parseColor("#B2B2B2"));
+
+            closeDrawer(drawerLayout);
+
+            if (!(fragmentProfile instanceof ProfileFragment)){
+                fragmentManager.beginTransaction()
+                        .replace(R.id.fragment_layout, profileFragment, ProfileFragment.class.getSimpleName())
+                        .commit();
+            }
+        });
+
+        logout.setOnClickListener( v -> {
+            showLogoutDialog();
+        });
 
         univ = findViewById(R.id.univ_btn);
         scholars = findViewById(R.id.scholars_btn);
@@ -133,13 +163,30 @@ public class MainActivity extends AppCompatActivity {
                         .commit();
             }
         });
+    }
 
-        TextView register = findViewById(R.id.register_btn);
-        register.setOnClickListener( v -> {
-            Intent intent = new Intent(this, RegisterActivity.class);
-            startActivity(intent);
+    private void showLogoutDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("logout");
+        builder.setMessage("Apakah Anda yakin ingin logout?");
+        builder.setPositiveButton("Ya", (dialog, which) -> {
+            SharedPreferences.Editor editor = preferencesLogin.edit();
+            editor.putBoolean("login", false);
+            editor.apply();
+
+            Intent intent = new Intent(this, LoginActivity.class);
             finish();
+            startActivity(intent);
         });
+        builder.setNegativeButton("Tidak", (dialog, which) -> {
+
+        });
+        AlertDialog dialog = builder.create();
+        dialog.setOnShowListener(dialogInterface -> {
+            dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(getResources().getColor(R.color.red));
+            dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(getResources().getColor(R.color.red));
+        });
+        dialog.show();
     }
 
     public void openDrawer(DrawerLayout drawerLayout){

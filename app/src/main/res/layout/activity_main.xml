@@ -1,241 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/drawerLayout"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Activity.MainActivity">
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:orientation="vertical">
-        <LinearLayout
-            android:orientation="vertical"
+        android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+            <include layout="@layout/toolbar"/>
+        </androidx.cardview.widget.CardView>
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white">
-                <include layout="@layout/toolbar"/>
-            </LinearLayout>
             <FrameLayout
+                android:id="@+id/fragment_layout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <FrameLayout
-                    android:id="@+id/fragment_layout"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:layout_gravity="bottom"
-                    android:background="@drawable/navbar_style"
-                    android:orientation="horizontal">
-                    <LinearLayout
-                        android:id="@+id/univ_btn"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical">
-                        <ImageView
-                            android:layout_width="54dp"
-                            android:layout_height="26dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/university_logo" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Universitas"
-                            android:textColor="@color/black"
-                            android:textSize="12dp" />
-                    </LinearLayout>
-                    <LinearLayout
-                        android:id="@+id/scholars_btn"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="60dp"
-                            android:layout_height="25dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/beasiswa_logo" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Beasiswa"
-                            android:textColor="@color/black"
-                            android:textSize="12dp" />
-                    </LinearLayout>
-                    <LinearLayout
-                        android:id="@+id/about_btn"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:background="#ADADAD"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="54dp"
-                            android:layout_height="27dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/about_logo" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Tentang"
-                            android:textColor="@color/black"
-                            android:textSize="12dp" />
-                    </LinearLayout>
-                    <LinearLayout
-                        android:id="@+id/learn_btn"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="87dp"
-                            android:layout_height="29dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/reference_logo" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Belajar"
-                            android:textAlignment="center"
-                            android:textColor="@color/black"
-                            android:textSize="12dp" />
-                    </LinearLayout>
-                    <LinearLayout
-                        android:id="@+id/profile_btn"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="60dp"
-                            android:layout_height="29dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/profile_logo" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Profil"
-                            android:textColor="@color/black"
-                            android:textSize="12dp" />
-                    </LinearLayout>
-                </LinearLayout>
-            </FrameLayout>
-        </LinearLayout>
-        <RelativeLayout
-            android:layout_width="230dp"
-            android:layout_height="match_parent"
-            android:background="@drawable/toolbar_style"
-            android:layout_gravity="end">
-            <include layout="@layout/nav_drawer"/>
-        </RelativeLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:background="@drawable/background_gradient"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingHorizontal="50dp"
-        android:gravity="center"
-        android:orientation="vertical">
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+                android:layout_height="match_parent"/>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical">
-                <ImageView
-                    android:layout_width="203dp"
-                    android:layout_height="94dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/edunihon_logo2" />
-                <TextView
-                    android:layout_marginTop="30dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Username"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:textSize="18dp"/>
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/username"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="15dp"
-                    android:background="@drawable/form_style"
-                    android:textColorHint="@color/black"
-                    android:paddingHorizontal="15dp"
-                    android:inputType="text" />
-                <TextView
-                    android:layout_marginTop="15dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Password"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:textSize="18dp"/>
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_marginTop="15dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:id="@+id/password"
-                    android:paddingHorizontal="15dp"
-                    android:background="@drawable/form_style"
-                    android:inputType="textPassword"/>
+                android:layout_height="70dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/navbar_style"
+                android:orientation="horizontal">
                 <LinearLayout
-                    android:id="@+id/login_btn"
-                    android:layout_marginTop="15dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/loginregister_btn">
+                    android:id="@+id/univ_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="54dp"
+                        android:layout_height="26dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/university_logo" />
                     <TextView
-                        android:paddingVertical="8dp"
-                        android:gravity="center"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="LOGIN"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"/>
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Universitas"
+                        android:textColor="@color/black"
+                        android:textSize="12dp" />
                 </LinearLayout>
                 <LinearLayout
-                    android:gravity="center"
-                    android:layout_marginTop="15dp"
-                    android:layout_width="match_parent"
+                    android:id="@+id/scholars_btn"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="25dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/beasiswa_logo" />
                     <TextView
-                        android:gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Belum mempunyai akun? "
-                        android:textColor="@color/black"/>
+                        android:text="Beasiswa"
+                        android:textColor="@color/black"
+                        android:textSize="12dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/about_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="#ADADAD"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="54dp"
+                        android:layout_height="27dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/about_logo" />
                     <TextView
-                        android:id="@+id/register_btn"
-                        android:gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="REGISTER"
-                        android:textStyle="bold"
-                        android:textColor="@color/black"/>
+                        android:text="Tentang"
+                        android:textColor="@color/black"
+                        android:textSize="12dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/learn_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="87dp"
+                        android:layout_height="29dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/reference_logo" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Belajar"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="12dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/profile_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="29dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/profile_logo" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Profil"
+                        android:textColor="@color/black"
+                        android:textSize="12dp" />
                 </LinearLayout>
             </LinearLayout>
-        </ScrollView>
+        </FrameLayout>
     </LinearLayout>
+    <RelativeLayout
+        android:layout_width="230dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/toolbar_style"
+        android:layout_gravity="end">
+        <include layout="@layout/nav_drawer"/>
+    </RelativeLayout>
 </androidx.drawerlayout.widget.DrawerLayout>
