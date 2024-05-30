@@ -38,7 +38,6 @@ public class AboutFragment extends Fragment {
         UniversityFragment universityFragment = new UniversityFragment();
         ScholarshipFragment scholarshipFragment = new ScholarshipFragment();
         LearnFragment learnFragment = new LearnFragment();
-        ProfileFragment profileFragment = new ProfileFragment();
 
         MainActivity mainActivity = (MainActivity) getActivity();
 

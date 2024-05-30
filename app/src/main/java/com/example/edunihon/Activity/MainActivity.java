@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         LearnFragment learnFragment = new LearnFragment();
         Fragment fragmentLearn = fragmentManager.findFragmentByTag(LearnFragment.class.getSimpleName());
 
-        ProfileFragment profileFragment = new ProfileFragment();
+        ProfileFragment profileFragment = new ProfileFragment(this);
         Fragment fragmentProfile = fragmentManager.findFragmentByTag(ProfileFragment.class.getSimpleName());
 
         if (!(fragmentAbout instanceof AboutFragment)){

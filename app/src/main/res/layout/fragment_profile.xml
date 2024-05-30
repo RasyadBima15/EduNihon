@@ -46,6 +46,7 @@
             android:textStyle="bold"
             android:layout_marginTop="15dp"/>
         <RadioGroup
+            android:id="@+id/radio_edu"
             android:layout_marginTop="10dp"
             android:layout_marginStart="20dp"
             android:layout_width="wrap_content"
@@ -106,87 +107,9 @@
             android:textColorHint="@color/black"
             android:paddingHorizontal="15dp"
             android:inputType="text" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Bahasa yang Dikuasai"
-            android:textColor="@color/black"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            android:layout_marginTop="20dp"/>
-        <CheckBox
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="20dp"
-            android:id="@+id/checkbox_inggris"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Inggris" />
-        <RadioGroup
-            android:id="@+id/radioGroup_inggris"
-            android:layout_marginStart="40dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:orientation="vertical">
-            <RadioButton
-                android:id="@+id/radio_pemula"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pemula" />
-            <RadioButton
-                android:id="@+id/radio_menengah"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Menengah" />
-            <RadioButton
-                android:id="@+id/radio_mahir"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mahir" />
-        </RadioGroup>
-        <CheckBox
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="20dp"
-            android:id="@+id/checkbox_jepang"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Jepang" />
-        <RadioGroup
-            android:id="@+id/radioGroup_jepang"
-            android:layout_marginStart="40dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:orientation="vertical">
-            <RadioButton
-                android:id="@+id/radio_n5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="N5" />
-            <RadioButton
-                android:id="@+id/radio_n4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="N4" />
-            <RadioButton
-                android:id="@+id/radio_n3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="N3" />
-            <RadioButton
-                android:id="@+id/radio_n2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="N2" />
-            <RadioButton
-                android:id="@+id/radio_n1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="N1" />
-        </RadioGroup>
         <LinearLayout
             android:id="@+id/save_btn"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="20dp"
             android:layout_marginBottom="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

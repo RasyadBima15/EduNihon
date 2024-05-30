@@ -23,7 +23,7 @@
             android:layout_marginTop="15dp"
             android:layout_width="match_parent"
             android:layout_height="225dp"
-            android:src="@drawable/renshuu"
+            android:src="@drawable/app_renshuu"
             android:scaleType="fitXY"/>
         <LinearLayout
             android:layout_marginVertical="15dp"

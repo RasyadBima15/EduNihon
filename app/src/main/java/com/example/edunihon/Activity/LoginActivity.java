@@ -39,7 +39,7 @@ public class LoginActivity extends AppCompatActivity {
             username = preferences.getString("username", "");
             password = preferences.getString("password", "");
             if (usernameTv.getText().toString().equals("")){
-                usernameTv.setError("NIM harus diisi!");
+                usernameTv.setError("Username harus diisi!");
                 return;
             }else if (passwordTv.getText().toString().equals("")){
                 passwordTv.setError("Password harus diisi!");

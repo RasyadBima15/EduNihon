@@ -9,13 +9,12 @@ public class University {
     private String desc;
     private String webUrl;
 
-    public University(Integer imageUniv, String name, int rank, String city, String desc, String webUrl){
+    public University(Integer imageUniv, String name, int rank, String city, String desc){
         this.imageUniv = imageUniv;
         this.name = name;
         this.rank = rank;
         this.city = city;
         this.desc = desc;
-        this.webUrl = webUrl;
     }
 
     public String getDesc() {
