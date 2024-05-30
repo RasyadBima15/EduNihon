@@ -8,11 +8,32 @@ public class Learn {
     private String level;
     private ArrayList<Integer> country;
 
-    public Learn(Integer imageLearn, String name, String level, ArrayList<Integer> country){
+    private String desc;
+    private String app;
+
+    public Learn(Integer imageLearn, String name, String level, ArrayList<Integer> country, String desc, String app){
         this.imageLearn = imageLearn;
         this.name = name;
         this.level = level;
         this.country = country;
+        this.desc = desc;
+        this.app = app;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
+    public String getApp() {
+        return app;
+    }
+
+    public void setApp(String app) {
+        this.app = app;
     }
 
     public Integer getImageLearn() {

@@ -5,12 +5,63 @@ public class Scholarship {
     private String name;
     private String provider;
     private String availability;
+    private String statusPaid;
 
-    public Scholarship(Integer imageScholarship, String name, String provider, String availability){
+    private String startDate;
+    private String endDate;
+    private String desc;
+    private String webUrl;
+
+    public Scholarship(Integer imageScholarship, String name, String provider, String availability, String statusPaid, String startDate, String endDate, String desc, String webUrl){
         this.imageScholarship = imageScholarship;
         this.name = name;
         this.provider = provider;
         this.availability = availability;
+        this.statusPaid = statusPaid;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.desc = desc;
+        this.webUrl = webUrl;
+    }
+
+    public String getStatusPaid() {
+        return statusPaid;
+    }
+
+    public void setStatusPaid(String statusPaid) {
+        this.statusPaid = statusPaid;
+    }
+
+    public String getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(String startDate) {
+        this.startDate = startDate;
+    }
+
+    public String getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(String endDate) {
+        this.endDate = endDate;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
+    public String getWebUrl() {
+        return webUrl;
+    }
+
+    public void setWebUrl(String webUrl) {
+        this.webUrl = webUrl;
     }
 
     public Integer getImageScholarship() {

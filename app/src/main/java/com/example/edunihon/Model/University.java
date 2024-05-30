@@ -6,11 +6,32 @@ public class University {
     private int rank;
     private String city;
 
-    public University(Integer imageUniv, String name, int rank, String city){
+    private String desc;
+    private String webUrl;
+
+    public University(Integer imageUniv, String name, int rank, String city, String desc, String webUrl){
         this.imageUniv = imageUniv;
         this.name = name;
         this.rank = rank;
         this.city = city;
+        this.desc = desc;
+        this.webUrl = webUrl;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
+    public String getWebUrl() {
+        return webUrl;
+    }
+
+    public void setWebUrl(String webUrl) {
+        this.webUrl = webUrl;
     }
 
     public Integer getImageUniv() {

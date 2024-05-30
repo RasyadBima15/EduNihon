@@ -15,27 +15,15 @@
         android:textColor="#FF0000"
         android:textSize="20dp"
         android:textStyle="bold"/>
-    <LinearLayout
-        android:layout_marginVertical="15dp"
+    <SearchView
+        android:id="@+id/search_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <SearchView
-            android:id="@+id/search_view"
-            android:layout_width="wrap_content"
-            android:layout_height="45dp"
-            android:layout_weight="1"
-            android:layout_gravity="center"
-            android:background="@drawable/search_style"
-            android:iconifiedByDefault="false"
-            android:queryHint="Search..." />
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:scaleType="fitCenter"
-            android:src="@drawable/filter"/>
-    </LinearLayout>
+        android:layout_height="43dp"
+        android:layout_gravity="center"
+        android:layout_marginVertical="15dp"
+        android:background="@drawable/search_style"
+        android:iconifiedByDefault="false"
+        android:queryHint="Search University..." />
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_univ"
         android:layout_width="match_parent"

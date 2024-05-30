@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginHorizontal="30dp"
+    android:layout_marginTop="25dp"
+    android:layout_marginBottom="15dp"
+    tools:context=".Fragment.UnivDetailFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="University of Tokyo"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="18dp"/>
+        <ImageView
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="225dp"
+            android:src="@drawable/univ_tokyo"
+            android:scaleType="fitXY"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="WUR Ranking: 81"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:layout_marginVertical="15dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/label_prefecture"
+            android:gravity="center"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:text="Tokyo"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp"
+            android:fontFamily="sans-serif-light"
+            android:text="Universitas Tokyo University of Science, yang sebelumnya dikenal sebagai “Science University of Tokyo” atau TUS, adalah sebuah universitas riset swasta yang terletak di Shinjuku, Tokyo, Jepang1. Didirikan pada tahun 1881, TUS merupakan salah satu universitas swasta tertua di Jepang yang berfokus pada ilmu pengetahuan dan teknologi2. \n\nDengan semangat yang kuat dalam etika, para ilmuwan dan insinyur di TUS berupaya untuk menyelesaikan tantangan global dan membuat dunia menjadi tempat yang lebih baik melalui sains. Universitas ini memiliki beberapa kampus, termasuk kampus utama di Kagurazaka, Shinjuku, dan kampus lainnya di Katsushika, Noda, dan Oshamambe."
+            android:textColor="@color/black" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Web Page"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="18dp"/>
+        <LinearLayout
+            android:layout_marginVertical="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_cta_style"
+            android:weightSum="4"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:text="http://www.sut.ac.jp/"
+                android:textColor="@color/white"
+                android:lineSpacingExtra="2dp"
+                android:paddingVertical="7dp"
+                android:paddingHorizontal="20dp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/arrow_outward_24"
+                android:layout_weight="3"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
