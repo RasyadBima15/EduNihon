@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -23,7 +24,7 @@ import com.example.edunihon.R;
 import java.util.ArrayList;
 
 public class UnivAdapter extends RecyclerView.Adapter<UnivAdapter.ViewHolder>{
-    private final ArrayList<University> universities;
+    private ArrayList<University> universities;
     Context context;
 
     public UnivAdapter(ArrayList<University> universities, Context context) {
@@ -48,6 +49,11 @@ public class UnivAdapter extends RecyclerView.Adapter<UnivAdapter.ViewHolder>{
     @Override
     public int getItemCount() {
         return universities.size();
+    }
+
+    public void updateList(ArrayList<University> newList) {
+        universities = newList;
+        notifyDataSetChanged();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
@@ -78,6 +84,9 @@ public class UnivAdapter extends RecyclerView.Adapter<UnivAdapter.ViewHolder>{
             });
 
             itemView.setOnClickListener( v -> {
+                InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(itemView.getWindowToken(), 0);
+
                 Bundle bundle = new Bundle();
                 bundle.putInt("idUniv", university.getId());
 

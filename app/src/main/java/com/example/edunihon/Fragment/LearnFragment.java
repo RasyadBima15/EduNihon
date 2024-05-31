@@ -11,10 +11,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SearchView;
 
 import com.example.edunihon.Adapter.LearnAdapter;
 import com.example.edunihon.Data.DataSource;
+import com.example.edunihon.Model.Learn;
+import com.example.edunihon.Model.Scholarship;
 import com.example.edunihon.R;
+
+import java.util.ArrayList;
 
 public class LearnFragment extends Fragment {
     Context context;
@@ -33,8 +38,33 @@ public class LearnFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        SearchView searchView = view.findViewById(R.id.search_view);
         RecyclerView learnRv = view.findViewById(R.id.rv_learn);
         LearnAdapter learnAdapter = new LearnAdapter(DataSource.learns, context);
         learnRv.setAdapter(learnAdapter);
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                ArrayList<Learn> filteredList = filterLearns(newText, DataSource.learns);
+                learnAdapter.updateList(filteredList);
+                return false;
+            }
+        });
+    }
+
+    private ArrayList<Learn> filterLearns(String query, ArrayList<Learn> learns) {
+        ArrayList<Learn> filteredList = new ArrayList<>();
+        for (Learn learn : learns) {
+            if (learn.getName().toLowerCase().contains(query.toLowerCase())) {
+                filteredList.add(learn);
+            }
+        }
+        return filteredList;
     }
 }

@@ -1,121 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_marginHorizontal="30dp"
     android:layout_marginTop="25dp"
     android:paddingBottom="65dp"
+    android:gravity="center"
     android:layout_marginBottom="15dp"
-    android:scrollbars="none"
+    android:orientation="vertical"
     tools:context=".Fragment.UnivDetailFragment">
-    <LinearLayout
+    <ScrollView
+        android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:scrollbars="none">
         <LinearLayout
-            android:id="@+id/back"
-            android:layout_width="90dp"
-            android:layout_height="30dp"
-            android:paddingStart="8dp"
-            android:gravity="start"
-            android:background="@drawable/button_cta_style"
-            android:orientation="horizontal">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@drawable/baseline_arrow_back_24"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/back"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
+                android:paddingStart="8dp"
+                android:gravity="start"
+                android:background="@drawable/button_cta_style"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/baseline_arrow_back_24"/>
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Back"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
             <TextView
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Back"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:textColor="@color/white"/>
-        </LinearLayout>
-        <TextView
-            android:id="@+id/univName"
-            android:layout_marginTop="15dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="University of Tokyo"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:textSize="18dp"/>
-        <androidx.cardview.widget.CardView
-            android:layout_marginTop="15dp"
-            android:layout_width="match_parent"
-            app:cardCornerRadius="8sp"
-            android:layout_height="225dp">
-            <ImageView
-                android:id="@+id/univImg"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/univ_tokyo"
-                android:scaleType="fitXY"/>
-        </androidx.cardview.widget.CardView>
-        <TextView
-            android:id="@+id/rank"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="WUR Ranking: 81"
-            android:textSize="16dp"
-            android:textColor="@color/black"
-            android:layout_marginVertical="15dp"/>
-        <TextView
-            android:id="@+id/city"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/label_prefecture"
-            android:gravity="center"
-            android:paddingHorizontal="8dp"
-            android:paddingVertical="4dp"
-            android:text="Tokyo"
-            android:textColor="@color/black"
-            android:textSize="13sp" />
-        <TextView
-            android:id="@+id/desc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="15dp"
-            android:fontFamily="sans-serif-light"
-            android:text="Universitas Tokyo University of Science, yang sebelumnya dikenal sebagai “Science University of Tokyo” atau TUS, adalah sebuah universitas riset swasta yang terletak di Shinjuku, Tokyo, Jepang1. Didirikan pada tahun 1881, TUS merupakan salah satu universitas swasta tertua di Jepang yang berfokus pada ilmu pengetahuan dan teknologi2. \n\nDengan semangat yang kuat dalam etika, para ilmuwan dan insinyur di TUS berupaya untuk menyelesaikan tantangan global dan membuat dunia menjadi tempat yang lebih baik melalui sains. Universitas ini memiliki beberapa kampus, termasuk kampus utama di Kagurazaka, Shinjuku, dan kampus lainnya di Katsushika, Noda, dan Oshamambe."
-            android:textColor="@color/black" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Web Page"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:textSize="18dp"/>
-        <LinearLayout
-            android:id="@+id/btn_cta"
-            android:layout_marginVertical="15dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button_cta_style"
-            android:weightSum="4"
-            android:orientation="horizontal">
-            <TextView
-                android:id="@+id/webpage"
-                android:layout_width="match_parent"
-                android:text="http://www.sut.ac.jp/"
-                android:textColor="@color/white"
-                android:lineSpacingExtra="2dp"
-                android:paddingVertical="7dp"
-                android:paddingHorizontal="20dp"
-                android:layout_weight="1"
-                android:textStyle="bold"
-                android:layout_height="wrap_content"/>
-            <ImageView
+                android:id="@+id/univName"
+                android:layout_marginTop="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="University of Tokyo"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="18dp"/>
+            <androidx.cardview.widget.CardView
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                app:cardCornerRadius="8sp"
+                android:layout_height="225dp">
+                <ImageView
+                    android:id="@+id/univImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/univ_tokyo"
+                    android:scaleType="fitXY"/>
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/rank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="WUR Ranking: 81"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:layout_marginVertical="15dp"/>
+            <TextView
+                android:id="@+id/city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/label_prefecture"
+                android:gravity="center"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="Tokyo"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                android:fontFamily="sans-serif-light"
+                android:text="Universitas Tokyo University of Science, yang sebelumnya dikenal sebagai “Science University of Tokyo” atau TUS, adalah sebuah universitas riset swasta yang terletak di Shinjuku, Tokyo, Jepang1. Didirikan pada tahun 1881, TUS merupakan salah satu universitas swasta tertua di Jepang yang berfokus pada ilmu pengetahuan dan teknologi2. \n\nDengan semangat yang kuat dalam etika, para ilmuwan dan insinyur di TUS berupaya untuk menyelesaikan tantangan global dan membuat dunia menjadi tempat yang lebih baik melalui sains. Universitas ini memiliki beberapa kampus, termasuk kampus utama di Kagurazaka, Shinjuku, dan kampus lainnya di Katsushika, Noda, dan Oshamambe."
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Web Page"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="18dp"/>
+            <LinearLayout
+                android:id="@+id/btn_cta"
+                android:layout_marginVertical="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_cta_style"
+                android:weightSum="4"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/webpage"
+                    android:layout_width="match_parent"
+                    tools:text="http://www.sut.ac.jp/"
+                    android:textColor="@color/white"
+                    android:lineSpacingExtra="2dp"
+                    android:paddingVertical="7dp"
+                    android:paddingHorizontal="20dp"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/arrow_outward_24"
+                    android:layout_weight="3"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <ProgressBar
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Internet Connection"
+            android:layout_marginBottom="15dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+        <LinearLayout
+            android:id="@+id/retry_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingVertical="12dp"
+            android:paddingHorizontal="17dp"
+            android:background="@drawable/error_style">
+            <TextView
                 android:layout_gravity="center"
-                android:src="@drawable/arrow_outward_24"
-                android:layout_weight="3"/>
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Try Again"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"/>
         </LinearLayout>
     </LinearLayout>
-</ScrollView>
+</LinearLayout>

@@ -11,15 +11,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import android.os.Handler;
+import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.example.edunihon.Config.RetrofitClient;
 import com.example.edunihon.Data.DataSource;
+import com.example.edunihon.Model.Scholarship;
 import com.example.edunihon.Model.University;
 import com.example.edunihon.R;
 import com.example.edunihon.Response.UnivResponse;
@@ -40,6 +44,11 @@ public class UnivDetailFragment extends Fragment {
     int idUniv;
     TextView webpage;
     String url;
+
+    LinearLayout error, progress;
+    ScrollView content;
+
+    Handler handler;
 
     public UnivDetailFragment(Context context){
         this.context = context;
@@ -72,11 +81,27 @@ public class UnivDetailFragment extends Fragment {
         LinearLayout btnCta = view.findViewById(R.id.btn_cta);
         webpage= view.findViewById(R.id.webpage);
 
+        content = view.findViewById(R.id.content);
+        progress = view.findViewById(R.id.progress);
+        error = view.findViewById(R.id.error);
+        LinearLayout retryBtn = view.findViewById(R.id.retry_btn);
+
         Bundle bundle = getArguments();
         idUniv = bundle.getInt("idUniv");
 
         for (University univ: DataSource.universities) {
             if(univ.getId() == idUniv){
+
+                content.setVisibility(View.GONE);
+                progress.setVisibility(View.VISIBLE);
+                handler = new Handler(Looper.getMainLooper());
+
+                retryBtn.setOnClickListener( v -> {
+                    error.setVisibility(View.GONE);
+                    progress.setVisibility(View.VISIBLE);
+                    getWebPage(univ.getName());
+                });
+
                 univName.setText(univ.getName());
                 univImg.setImageResource(univ.getImageUniv());
                 rank.setText("WUR Ranking: " + univ.getRank());
@@ -84,8 +109,6 @@ public class UnivDetailFragment extends Fragment {
                 desc.setText(univ.getDesc());
 
                 getWebPage(univ.getName());
-
-//                System.out.println("Url" + url);
 
                 btnCta.setOnClickListener( v -> {
                     Intent intent = new Intent(Intent.ACTION_VIEW);
@@ -109,6 +132,10 @@ public class UnivDetailFragment extends Fragment {
                             if (Objects.equals(university.getName(), univName)){
                                 webpage.setText(webPageText);
                                 url = webPageText;
+                                handler.postDelayed(() -> {
+                                    progress.setVisibility(View.GONE);
+                                    content.setVisibility(View.VISIBLE);
+                                }, 1500);
                                 break;
                             }
                         }
@@ -119,8 +146,9 @@ public class UnivDetailFragment extends Fragment {
             }
             @Override
             public void onFailure(Call<List<UnivResponse>> call, Throwable t) {
-                System.out.println("API call failed");
-                t.printStackTrace();
+//                t.printStackTrace();
+                progress.setVisibility(View.GONE);
+                error.setVisibility(View.VISIBLE);
             }
         });
     }

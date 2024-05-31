@@ -10,14 +10,13 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
+import android.view.inputmethod.InputMethodManager;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.edunihon.Fragment.AboutFragment;
 import com.example.edunihon.Fragment.LearnDetailFragment;
 import com.example.edunihon.Model.Learn;
 import com.example.edunihon.R;
@@ -26,7 +25,7 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class LearnAdapter extends RecyclerView.Adapter<LearnAdapter.ViewHolder>{
-    private final ArrayList<Learn> learns;
+    private ArrayList<Learn> learns;
     Context context;
 
     public LearnAdapter(ArrayList<Learn> learns, Context context) {
@@ -51,6 +50,11 @@ public class LearnAdapter extends RecyclerView.Adapter<LearnAdapter.ViewHolder>{
     @Override
     public int getItemCount() {
         return learns.size();
+    }
+
+    public void updateList(ArrayList<Learn> newList) {
+        learns = newList;
+        notifyDataSetChanged();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -87,6 +91,7 @@ public class LearnAdapter extends RecyclerView.Adapter<LearnAdapter.ViewHolder>{
             }
 
             ArrayList<Integer> flags = learn.getCountry();
+            flagLayout.removeAllViews();
             if (flags.size() > 1){
                 ImageView newImageView = new ImageView(context);
                 LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
@@ -105,6 +110,9 @@ public class LearnAdapter extends RecyclerView.Adapter<LearnAdapter.ViewHolder>{
             LearnDetailFragment learnDetailFragment = new LearnDetailFragment(context);
 
             itemView.setOnClickListener(v -> {
+                InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(itemView.getWindowToken(), 0);
+
                 Bundle bundle = new Bundle();
                 bundle.putInt("idLearn", learn.getId());
 

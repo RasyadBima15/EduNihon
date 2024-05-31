@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,16 +16,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.edunihon.Activity.MainActivity;
 import com.example.edunihon.Fragment.LearnDetailFragment;
 import com.example.edunihon.Fragment.ScholarsDetailFragment;
+import com.example.edunihon.Fragment.ScholarshipFragment;
 import com.example.edunihon.Model.Scholarship;
+import com.example.edunihon.Model.University;
 import com.example.edunihon.R;
 
 import java.util.ArrayList;
 import java.util.Objects;
 
 public class ScholarsAdapter extends RecyclerView.Adapter<ScholarsAdapter.ViewHolder>{
-    private final ArrayList<Scholarship> scholarships;
+    private ArrayList<Scholarship> scholarships;
     Context context;
 
     public ScholarsAdapter(ArrayList<Scholarship> scholarships, Context context) {
@@ -49,6 +53,11 @@ public class ScholarsAdapter extends RecyclerView.Adapter<ScholarsAdapter.ViewHo
     @Override
     public int getItemCount() {
         return scholarships.size();
+    }
+
+    public void updateList(ArrayList<Scholarship> newList) {
+        scholarships = newList;
+        notifyDataSetChanged();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -88,6 +97,9 @@ public class ScholarsAdapter extends RecyclerView.Adapter<ScholarsAdapter.ViewHo
             ScholarsDetailFragment scholarsDetailFragment = new ScholarsDetailFragment(context);
 
             itemView.setOnClickListener(v -> {
+                InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(itemView.getWindowToken(), 0);
+
                 Bundle bundle = new Bundle();
                 bundle.putInt("idScholars", scholarship.getId());
 
