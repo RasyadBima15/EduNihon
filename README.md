@@ -12,7 +12,7 @@ EduNihon adalah platform yang dirancang untuk siswa yang ingin melanjutkan studi
   <img src="app/src/main/res/drawable/pic2.jpg" alt="pic2">
 </p>
 
-Misi kami adalah untuk memberdayakan siswa dengan menyediakan informasi yang akurat dan relevan, sehingga mereka dapat mempersiapkan diri dengan baik untuk melanjutkan pendidikan di Jepang.  Dengan dukungan kami, siswa dapat menghadapi tantangan akademik dan budaya di Jepang dengan percaya diri dan kesuksesan. Aplikasi ini dibuat untuk memfasilitasi siswa dalam mendapatkan informasi akurat dan relevan mengenai pendidikan di Jepang. Dengan demikian, siswa dapat mempersiapkan diri dengan lebih baik untuk melanjutkan pendidikannya di Jepang.
+Misi kami adalah untuk memberdayakan siswa dengan menyediakan informasi yang akurat dan relevan, sehingga mereka dapat mempersiapkan diri dengan baik untuk melanjutkan pendidikan di Jepang. Kami percaya bahwa dengan memberikan akses kepada informasi yang komprehensif dan dukungan yang tepat, siswa akan dapat membuat keputusan yang terinformasi dan sukses dalam mencapai tujuan pendidikan mereka di Jepang.
 
 ## Mengapa Memilih EduNihon?
 
