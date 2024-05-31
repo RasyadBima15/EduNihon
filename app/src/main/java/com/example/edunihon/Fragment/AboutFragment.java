@@ -21,6 +21,7 @@ public class AboutFragment extends Fragment {
     Context context;
     public FragmentManager fragmentManager;
 
+    public AboutFragment() {}
     public AboutFragment(Context context){
         this.context = context;
     }

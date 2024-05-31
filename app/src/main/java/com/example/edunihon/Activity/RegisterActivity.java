@@ -53,7 +53,7 @@ public class RegisterActivity extends AppCompatActivity {
             }
 
             if(!Objects.equals(password, confirmpass)){
-                Toast.makeText(this, "Konfirmasi kata sandi harus sesuai dengan kata sandi", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Konfirmasi kata sandi harus sesuai dengan kata sandi!", Toast.LENGTH_LONG).show();
                 return;
             }
 
@@ -65,6 +65,7 @@ public class RegisterActivity extends AppCompatActivity {
 
             Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
+            Toast.makeText(this, "Registrasi Sukses!", Toast.LENGTH_LONG).show();
             finish();
         });
 

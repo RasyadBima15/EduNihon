@@ -175,6 +175,7 @@ public class MainActivity extends AppCompatActivity {
             editor.apply();
 
             Intent intent = new Intent(this, LoginActivity.class);
+            Toast.makeText(this, "Anda telah keluar!", Toast.LENGTH_LONG).show();
             finish();
             startActivity(intent);
         });

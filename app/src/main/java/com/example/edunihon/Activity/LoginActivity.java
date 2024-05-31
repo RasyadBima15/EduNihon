@@ -52,6 +52,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(this, MainActivity.class);
                 finish();
+                Toast.makeText(this, "Login Sukses!", Toast.LENGTH_LONG).show();
                 startActivity(intent);
             } else {
                 Toast.makeText(this, "Username atau Password salah!", Toast.LENGTH_LONG).show();
