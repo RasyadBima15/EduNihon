@@ -1,5 +1,6 @@
 package com.example.edunihon.Fragment;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -17,6 +18,12 @@ import com.example.edunihon.Activity.MainActivity;
 import com.example.edunihon.R;
 
 public class AboutFragment extends Fragment {
+    Context context;
+    public FragmentManager fragmentManager;
+
+    public AboutFragment(Context context){
+        this.context = context;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -33,11 +40,11 @@ public class AboutFragment extends Fragment {
         LinearLayout scholars = view.findViewById(R.id.scholars_btn);
         LinearLayout learn = view.findViewById(R.id.learn_btn);
 
-        FragmentManager fragmentManager = getParentFragmentManager();
+        fragmentManager = getParentFragmentManager();
 
-        UniversityFragment universityFragment = new UniversityFragment();
-        ScholarshipFragment scholarshipFragment = new ScholarshipFragment();
-        LearnFragment learnFragment = new LearnFragment();
+        UniversityFragment universityFragment = new UniversityFragment(context);
+        ScholarshipFragment scholarshipFragment = new ScholarshipFragment(context);
+        LearnFragment learnFragment = new LearnFragment(context);
 
         MainActivity mainActivity = (MainActivity) getActivity();
 

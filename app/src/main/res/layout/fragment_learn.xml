@@ -25,9 +25,10 @@
         android:iconifiedByDefault="false"
         android:queryHint="Search App..." />
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_univ"
+        android:id="@+id/rv_learn"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:paddingBottom="50dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:itemCount="6"
         tools:listitem="@layout/learn_item"/>

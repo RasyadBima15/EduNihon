@@ -47,16 +47,16 @@ public class MainActivity extends AppCompatActivity {
         TextView logout = findViewById(R.id.logout);
 
         FragmentManager fragmentManager = getSupportFragmentManager();
-        AboutFragment aboutFragment = new AboutFragment();
+        AboutFragment aboutFragment = new AboutFragment(this);
         Fragment fragmentAbout = fragmentManager.findFragmentByTag(AboutFragment.class.getSimpleName());
 
-        UniversityFragment universityFragment = new UniversityFragment();
+        UniversityFragment universityFragment = new UniversityFragment(this);
         Fragment fragmentUniversity = fragmentManager.findFragmentByTag(UniversityFragment.class.getSimpleName());
 
-        ScholarshipFragment scholarshipFragment = new ScholarshipFragment();
+        ScholarshipFragment scholarshipFragment = new ScholarshipFragment(this);
         Fragment fragmentScholarship = fragmentManager.findFragmentByTag(ScholarshipFragment.class.getSimpleName());
 
-        LearnFragment learnFragment = new LearnFragment();
+        LearnFragment learnFragment = new LearnFragment(this);
         Fragment fragmentLearn = fragmentManager.findFragmentByTag(LearnFragment.class.getSimpleName());
 
         ProfileFragment profileFragment = new ProfileFragment(this);

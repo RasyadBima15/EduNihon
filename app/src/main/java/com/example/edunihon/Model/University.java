@@ -1,6 +1,15 @@
 package com.example.edunihon.Model;
 
 public class University {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    private int id;
     private Integer imageUniv;
     private String name;
     private int rank;
@@ -9,7 +18,8 @@ public class University {
     private String desc;
     private String webUrl;
 
-    public University(Integer imageUniv, String name, int rank, String city, String desc){
+    public University(int id, Integer imageUniv, String name, int rank, String city, String desc){
+        this.id = id;
         this.imageUniv = imageUniv;
         this.name = name;
         this.rank = rank;

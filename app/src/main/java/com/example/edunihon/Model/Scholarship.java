@@ -1,6 +1,15 @@
 package com.example.edunihon.Model;
 
 public class Scholarship {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    private int id;
     private Integer imageScholarship;
     private String name;
     private String provider;
@@ -12,7 +21,8 @@ public class Scholarship {
     private String desc;
     private String webUrl;
 
-    public Scholarship(Integer imageScholarship, String name, String provider, String availability, String statusPaid, String startDate, String endDate, String desc, String webUrl){
+    public Scholarship(int id, Integer imageScholarship, String name, String provider, String availability, String statusPaid, String startDate, String endDate, String desc, String webUrl){
+        this.id = id;
         this.imageScholarship = imageScholarship;
         this.name = name;
         this.provider = provider;

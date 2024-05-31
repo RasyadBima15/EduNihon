@@ -3,34 +3,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_marginHorizontal="30dp"
     android:layout_marginTop="25dp"
     android:layout_marginBottom="15dp"
+    android:paddingBottom="65dp"
+    android:scrollbars="none"
     tools:context=".Fragment.UnivDetailFragment">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/back"
+            android:layout_width="90dp"
+            android:layout_height="30dp"
+            android:paddingStart="8dp"
+            android:gravity="start"
+            android:background="@drawable/button_cta_style"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/baseline_arrow_back_24"/>
+            <TextView
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Back"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+        </LinearLayout>
         <TextView
+            android:id="@+id/appName"
+            android:layout_marginTop="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Renshuu"
             android:textColor="@color/black"
             android:textStyle="bold"
             android:textSize="18dp"/>
-        <ImageView
-            android:layout_marginTop="15dp"
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="225dp"
-            android:src="@drawable/app_renshuu"
-            android:scaleType="fitXY"/>
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="15dp">
+            <ImageView
+                android:id="@+id/appImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/app_renshuu" />
+        </androidx.cardview.widget.CardView>
         <LinearLayout
-            android:layout_marginVertical="15dp"
+            android:id="@+id/flag_container"
+            android:layout_marginVertical="16dp"
             android:layout_width="match_parent"
+            android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
+                android:id="@+id/level"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/level_style"
@@ -42,12 +77,14 @@
                 android:textColor="@color/black"
                 android:textSize="13sp" />
             <ImageView
+                android:id="@+id/flag"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:layout_marginEnd="2dp"
                 android:src="@drawable/japan_logo"/>
         </LinearLayout>
         <TextView
+            android:id="@+id/desc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
@@ -62,6 +99,7 @@
             android:textStyle="bold"
             android:textSize="18dp"/>
         <LinearLayout
+            android:id="@+id/btn_cta"
             android:layout_marginVertical="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

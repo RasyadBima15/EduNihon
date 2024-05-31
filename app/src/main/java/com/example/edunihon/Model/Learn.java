@@ -3,6 +3,14 @@ package com.example.edunihon.Model;
 import java.util.ArrayList;
 
 public class Learn {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    private int id;
     private Integer imageLearn;
     private String name;
     private String level;
@@ -11,7 +19,8 @@ public class Learn {
     private String desc;
     private String app;
 
-    public Learn(Integer imageLearn, String name, String level, ArrayList<Integer> country, String desc, String app){
+    public Learn(int id, Integer imageLearn, String name, String level, ArrayList<Integer> country, String desc, String app){
+        this.id = id;
         this.imageLearn = imageLearn;
         this.name = name;
         this.level = level;

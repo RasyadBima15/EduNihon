@@ -26,6 +26,7 @@
         android:queryHint="Search University..." />
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_univ"
+        android:paddingBottom="50dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"

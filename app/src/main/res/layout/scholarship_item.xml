@@ -11,12 +11,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <ImageView
-            android:layout_width="90dp"
-            android:layout_height="70dp"
-            android:scaleType="fitXY"
-            android:layout_gravity="center"
-            android:src="@drawable/scholars_jasso" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="110dp"
+            android:layout_height="90dp"
+            app:cardCornerRadius="12dp"
+            android:layout_gravity="center">
+            <ImageView
+                android:id="@+id/imageScholars"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/scholars_jasso" />
+        </androidx.cardview.widget.CardView>
         <LinearLayout
             android:layout_width="170dp"
             android:layout_height="wrap_content"
@@ -26,26 +32,29 @@
             android:layout_marginEnd="10dp"
             android:orientation="vertical">
             <TextView
+                android:id="@+id/nameScholars"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Beasiswa JASSO"
                 android:textColor="@color/black"
-                android:textSize="15sp"
+                android:textSize="13sp"
                 android:textStyle="bold" />
             <TextView
+                android:id="@+id/provider"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginTop="8dp"
                 android:lineSpacingExtra="5dp"
                 android:text="Japan Student Services Organization"
                 android:textColor="@color/black"
-                android:textSize="13sp" />
+                android:textSize="12sp" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="10dp"
                 android:orientation="horizontal">
                 <TextView
+                    android:id="@+id/availability"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:background="@drawable/availability_style"
@@ -54,8 +63,9 @@
                     android:paddingVertical="4dp"
                     android:text="Available"
                     android:textColor="@color/black"
-                    android:textSize="13sp" />
+                    android:textSize="12sp" />
                 <TextView
+                    android:id="@+id/typeScholars"
                     android:layout_marginStart="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -65,7 +75,7 @@
                     android:paddingVertical="4dp"
                     android:text="Partial"
                     android:textColor="@color/black"
-                    android:textSize="13sp" />
+                    android:textSize="11sp" />
             </LinearLayout>
         </LinearLayout>
         <ImageView
