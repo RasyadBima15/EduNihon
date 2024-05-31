@@ -7,13 +7,17 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.edunihon.R;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
+
+import java.util.Objects;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    String username, password;
+    String username, password, confirmpass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,17 +33,27 @@ public class RegisterActivity extends AppCompatActivity {
 
         TextInputEditText usernameTv = findViewById(R.id.username);
         TextInputEditText passwordTv = findViewById(R.id.password);
+        TextInputEditText confirmpassTv = findViewById(R.id.confirm_password);
         LinearLayout register = findViewById(R.id.register_btn);
 
         register.setOnClickListener( v -> {
             username = String.valueOf(usernameTv.getText());
             password = String.valueOf(passwordTv.getText());
+            confirmpass = String.valueOf(confirmpassTv.getText());
 
             if (usernameTv.getText().toString().equals("")){
                 usernameTv.setError("Username harus diisi!");
                 return;
             }else if (passwordTv.getText().toString().equals("")){
                 passwordTv.setError("Password harus diisi!");
+                return;
+            } else if (confirmpassTv.getText().equals("")){
+                confirmpassTv.setError("Confirm Password harus diisi!");
+                return;
+            }
+
+            if(!Objects.equals(password, confirmpass)){
+                Toast.makeText(this, "Konfirmasi kata sandi harus sesuai dengan kata sandi", Toast.LENGTH_LONG).show();
                 return;
             }
 

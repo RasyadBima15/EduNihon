@@ -54,6 +54,22 @@
                 android:paddingHorizontal="15dp"
                 android:background="@drawable/form_style"
                 android:inputType="textPassword"/>
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Confirm Password"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="18dp"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/confirm_password"
+                android:paddingHorizontal="15dp"
+                android:background="@drawable/form_style"
+                android:inputType="textPassword"/>
             <LinearLayout
                 android:id="@+id/register_btn"
                 android:layout_marginTop="15dp"
